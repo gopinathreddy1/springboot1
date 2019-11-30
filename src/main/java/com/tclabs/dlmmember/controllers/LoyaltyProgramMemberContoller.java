@@ -19,6 +19,8 @@ public class LoyaltyProgramMemberContoller {
 	@PostMapping("/create")
 		public Mono<LoyaltyBalance> create(@RequestBody LoyaltyBalance loyaltyBalance) throws NullDataException{
 	Mono<LoyaltyBalance> loyaltyBalances= loyaltyMemberServices.create(loyaltyBalance);
+	system.out.println("hello");
+	system.out.println("this is gopi");
 	if(loyaltyBalances!=null){
 		return loyaltyBalances;
 	}
